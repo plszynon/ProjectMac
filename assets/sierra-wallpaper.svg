@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2880 1800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#556b80"/>
+      <stop offset=".34" stop-color="#91a0a3"/>
+      <stop offset=".58" stop-color="#d9b29a"/>
+      <stop offset=".72" stop-color="#eac0a3"/>
+      <stop offset="1" stop-color="#91a0a5"/>
+    </linearGradient>
+    <radialGradient id="sun-haze" cx="56%" cy="51%" r="48%">
+      <stop stop-color="#ffe1b6" stop-opacity=".9"/>
+      <stop offset=".28" stop-color="#f4c6aa" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#d7b4a4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far-mountain" x2="0" y2="1">
+      <stop stop-color="#7d8e98"/>
+      <stop offset=".5" stop-color="#617783"/>
+      <stop offset="1" stop-color="#4c6473"/>
+    </linearGradient>
+    <linearGradient id="main-mountain" x2="0" y2="1">
+      <stop stop-color="#d2c9bb"/>
+      <stop offset=".18" stop-color="#abb0b0"/>
+      <stop offset=".54" stop-color="#6d818c"/>
+      <stop offset="1" stop-color="#455d6d"/>
+    </linearGradient>
+    <linearGradient id="shadow-mountain" x2=".8" y2="1">
+      <stop stop-color="#7d8e96"/>
+      <stop offset=".47" stop-color="#4d6472"/>
+      <stop offset="1" stop-color="#2a4050"/>
+    </linearGradient>
+    <linearGradient id="water" x2="0" y2="1">
+      <stop stop-color="#88999d"/>
+      <stop offset=".2" stop-color="#687e8c"/>
+      <stop offset=".58" stop-color="#465e70"/>
+      <stop offset="1" stop-color="#24394a"/>
+    </linearGradient>
+    <linearGradient id="reflection" x2="0" y2="1">
+      <stop stop-color="#f2c9a7" stop-opacity=".63"/>
+      <stop offset=".27" stop-color="#b78f82" stop-opacity=".44"/>
+      <stop offset=".7" stop-color="#536d7d" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#253b4d" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="lake"><path d="M0 1138 C420 1106 690 1158 1040 1132 C1420 1102 1740 1158 2100 1127 C2420 1100 2630 1145 2880 1110 L2880 1800 L0 1800Z"/></clipPath>
+  </defs>
+  <rect width="2880" height="1800" fill="url(#sky)"/>
+  <rect width="2880" height="1200" fill="url(#sun-haze)"/>
+  <path d="M0 522 C340 470 570 490 840 532 C1100 573 1420 493 1680 509 C2030 529 2250 475 2580 505 C2700 517 2790 517 2880 500 L2880 720 C2490 683 2250 747 1930 698 C1600 648 1300 737 990 685 C690 636 335 713 0 673Z" fill="#eed2bc" opacity=".12"/>
+  <path d="M0 680 C390 646 670 715 1000 671 C1260 637 1570 689 1870 655 C2200 619 2520 675 2880 632 L2880 860 C2490 827 2170 870 1850 839 C1470 803 1180 872 810 824 C470 780 250 850 0 830Z" fill="#f5d3b6" opacity=".12"/>
+  <path d="M0 979 L236 868 384 916 590 792 745 879 934 746 1060 842 1228 690 1350 826 1538 652 1685 824 1842 737 1979 846 2160 755 2298 857 2456 748 2584 829 2750 728 2880 791 2880 1168 0 1184Z" fill="url(#far-mountain)"/>
+  <path d="M0 1012 L184 914 287 954 477 822 617 925 773 823 900 920 1085 753 1210 913 1378 770 1517 922 1670 790 1798 911 1962 798 2110 908 2284 772 2414 917 2580 784 2722 884 2880 770 2880 1210 0 1205Z" fill="#738792" opacity=".68"/>
+  <path d="M0 1120 L234 970 366 1005 586 875 728 989 891 855 1032 974 1194 759 1348 960 1512 704 1655 940 1812 834 1934 976 2114 808 2270 969 2440 840 2586 956 2743 824 2880 912 2880 1260 0 1250Z" fill="url(#main-mountain)"/>
+  <path d="M889 856 L1194 759 1067 858 1005 873 954 925 908 901 865 930Z" fill="#e6e1d7" opacity=".84"/>
+  <path d="M1194 759 L1348 960 1267 886 1228 873 1199 830 1160 855 1118 851Z" fill="#d6d3cc" opacity=".84"/>
+  <path d="M1512 704 L1655 940 1576 852 1547 844 1518 788 1481 816 1444 811Z" fill="#f0e8d9" opacity=".9"/>
+  <path d="M2114 808 L2270 969 2183 889 2156 879 2125 853 2092 878 2057 871Z" fill="#d9d8d0" opacity=".7"/>
+  <path d="M586 875 L728 989 644 940 616 932 589 904 558 923 526 914Z" fill="#e0ded5" opacity=".66"/>
+  <path d="M0 1134 L178 1031 346 1090 514 984 690 1092 850 955 1020 1084 1175 941 1358 1080 1513 905 1693 1081 1852 973 2004 1090 2190 918 2370 1089 2546 934 2710 1050 2880 924 2880 1270 0 1285Z" fill="url(#shadow-mountain)" opacity=".96"/>
+  <path d="M0 1148 C320 1104 635 1165 928 1134 C1210 1103 1460 1163 1744 1130 C2060 1093 2320 1160 2590 1121 C2704 1106 2802 1115 2880 1101 L2880 1800 L0 1800Z" fill="url(#water)"/>
+  <g clip-path="url(#lake)" opacity=".65">
+    <path d="M0 1168 C410 1147 740 1185 1100 1163 C1480 1140 1750 1182 2100 1157 C2440 1135 2660 1170 2880 1144 L2880 1340 C2470 1318 2250 1347 1910 1324 C1550 1300 1250 1348 900 1321 C580 1299 285 1332 0 1311Z" fill="url(#reflection)"/>
+    <path d="M1100 1155 C1280 1164 1478 1154 1660 1162 L1623 1800 1178 1800Z" fill="#edc5a1" opacity=".14"/>
+    <path d="M90 1230 C470 1210 710 1239 952 1221 M1860 1214 C2180 1199 2475 1220 2820 1204 M0 1288 C365 1274 620 1300 886 1282 M2020 1295 C2325 1276 2580 1301 2880 1280 M160 1381 C440 1364 640 1389 832 1373 M2060 1370 C2340 1358 2585 1380 2840 1367 M0 1460 C260 1448 520 1472 780 1456 M1850 1457 C2140 1441 2460 1471 2880 1448 M260 1555 C560 1543 755 1563 1015 1550 M1740 1564 C2060 1548 2420 1576 2780 1558 M0 1668 C370 1654 650 1679 950 1663 M1960 1665 C2220 1647 2580 1674 2880 1659" fill="none" stroke="#d7c1af" stroke-width="5" opacity=".22"/>
+  </g>
+  <path d="M0 1190 C250 1165 432 1193 658 1170 C865 1149 1056 1181 1257 1160 L1257 1227 C1000 1245 792 1207 554 1235 C341 1259 171 1230 0 1254Z" fill="#1d3343" opacity=".3"/>
+  <path d="M1890 1164 C2157 1185 2355 1155 2565 1176 C2705 1190 2790 1171 2880 1161 L2880 1234 C2700 1253 2572 1224 2385 1245 C2200 1266 2054 1235 1880 1252Z" fill="#23394a" opacity=".36"/>
+  <g fill="#172b37" opacity=".72">
+    <path d="M0 1227 L0 1060 42 1123 64 1027 84 1128 112 1080 134 1149 164 1094 191 1172 230 1127 257 1194 294 1153 325 1224Z"/>
+    <path d="M2650 1232 L2683 1155 2716 1190 2748 1078 2780 1178 2812 1112 2843 1180 2870 1127 2880 1147 2880 1239Z"/>
+    <path d="M96 1260 L128 1189 157 1218 182 1128 211 1209 245 1173 274 1237 304 1196 340 1263Z"/>
+    <path d="M2524 1255 L2553 1202 2581 1230 2605 1143 2636 1220 2668 1181 2698 1243 2724 1202 2754 1264Z"/>
+  </g>
+</svg>

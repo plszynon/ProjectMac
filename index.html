@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#445d72">
+  <title>macOS Sierra — Browser Replica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="desktop" class="desktop" aria-label="macOS Sierra browser replica">
+    <div id="boot-screen" class="boot-screen" aria-live="polite">
+      <div class="boot-center">
+        <div class="boot-symbol" aria-hidden="true"><span class="apple-mark"></span></div>
+        <div class="boot-label">macOS Sierra</div>
+        <div class="boot-progress"><span id="boot-progress-bar"></span></div>
+        <div id="boot-status" class="boot-status">Starting up</div>
+      </div>
+    </div>
+    <div id="setup-screen" class="setup-screen" hidden>
+      <section class="setup-card">
+        <div class="setup-emblem" aria-hidden="true"><span class="apple-mark"></span></div>
+        <div id="setup-content"></div>
+        <div class="setup-actions"><button id="setup-back" class="soft-button">Back</button><button id="setup-next" class="primary-button">Continue</button></div>
+        <div class="setup-step-dots" id="setup-dots"></div>
+      </section>
+    </div>
+    <div id="login-screen" class="login-screen" hidden></div>
+    <div id="power-screen" class="power-screen" hidden>
+      <section class="power-card"><span class="apple-mark" aria-hidden="true"></span><p>It is now safe to turn off your Mac.</p><button id="power-on" class="primary-button">Power On</button></section>
+    </div>
+    <header class="menubar">
+      <div class="menu-left">
+        <button class="menubar-mark" aria-label="Apple menu" data-menu="system"><span class="apple-mark" aria-hidden="true"></span></button>
+        <button class="menubar-app" data-menu="app"><strong id="active-app">Finder</strong></button>
+        <button data-menu="file">File</button>
+        <button data-menu="edit">Edit</button>
+        <button data-menu="view">View</button>
+        <button data-menu="go">Go</button>
+        <button data-menu="window">Window</button>
+        <button data-menu="help">Help</button>
+      </div>
+      <div class="menu-right">
+        <button class="status-pill wifi" aria-label="Wi-Fi status" data-action="wifi"><svg class="status-icon" viewBox="0 0 24 20" aria-hidden="true"><path d="M2 6.2a15.5 15.5 0 0 1 20 0M5.3 9.7a10.4 10.4 0 0 1 13.4 0M8.9 13.2a5.2 5.2 0 0 1 6.2 0"/><circle cx="12" cy="17" r="1.4"/></svg></button>
+        <button class="status-pill battery" aria-label="Battery status" data-action="battery"><svg class="status-icon" viewBox="0 0 24 18" aria-hidden="true"><rect x="1.5" y="3" width="19" height="12" rx="2"/><path d="M22 7v4"/><rect x="4" y="5.5" width="14" height="7" rx="1" class="battery-charge"/></svg></button>
+        <button class="status-pill" aria-label="Siri" data-action="siri">✦</button>
+        <button class="status-pill" aria-label="Spotlight search" data-action="spotlight">⌕</button>
+        <button class="status-pill notifications" aria-label="Notification Center" data-action="notifications">☰</button>
+        <button class="clock" id="clock" data-action="notifications" aria-label="Open Notification Center"></button>
+      </div>
+    </header>
+
+    <section id="desktop-icons" class="desktop-icons" aria-label="Desktop items">
+      <button class="desktop-item" data-open="Finder" data-view="Desktop"><span class="drive-icon">▤</span><span>Macintosh HD</span></button>
+      <button class="desktop-item" data-open="Notes"><span class="file-icon">✎</span><span>Welcome note</span></button>
+      <button class="desktop-item" data-open="Photos"><span class="photo-icon">✿</span><span>Wallpaper</span></button>
+    </section>
+
+    <section id="windows" class="windows" aria-live="polite"></section>
+
+    <nav class="dock-wrap" aria-label="App dock">
+      <div class="dock">
+        <button class="dock-app" data-open="Finder" aria-label="Open Finder"><span class="dock-icon finder">◉</span><span class="dock-tip">Finder</span></button>
+        <button class="dock-app" data-open="Launchpad" aria-label="Open Launchpad"><span class="dock-icon launchpad">▦</span><span class="dock-tip">Launchpad</span></button>
+        <button class="dock-app" data-open="Browser" aria-label="Open Safari"><span class="dock-icon browser">⌖</span><span class="dock-tip">Safari</span></button>
+        <span class="dock-separator"></span>
+        <button class="dock-app" data-open="Mail" aria-label="Open Mail"><span class="dock-icon mail">✉</span><span class="dock-tip">Mail</span></button>
+        <button class="dock-app" data-open="Contacts" aria-label="Open Contacts"><span class="dock-icon contacts">●</span><span class="dock-tip">Contacts</span></button>
+        <button class="dock-app" data-open="Calendar" aria-label="Open Calendar"><span class="dock-icon calendar"><small id="dock-weekday">MON</small><b id="dock-day">14</b></span><span class="dock-tip">Calendar</span></button>
+        <button class="dock-app" data-open="Notes" aria-label="Open Notes"><span class="dock-icon notes">▤</span><span class="dock-tip">Notes</span></button>
+        <button class="dock-app" data-open="Reminders" aria-label="Open Reminders"><span class="dock-icon reminders">☷</span><span class="dock-tip">Reminders</span></button>
+        <button class="dock-app" data-open="Maps" aria-label="Open Maps"><span class="dock-icon maps">↗</span><span class="dock-tip">Maps</span></button>
+        <button class="dock-app" data-open="Photos" aria-label="Open Photos"><span class="dock-icon photos">✿</span><span class="dock-tip">Photos</span></button>
+        <button class="dock-app" data-open="Messages" aria-label="Open Messages"><span class="dock-icon messages">●</span><span class="dock-tip">Messages</span></button>
+        <button class="dock-app" data-open="FaceTime" aria-label="Open FaceTime"><span class="dock-icon facetime">◖</span><span class="dock-tip">FaceTime</span></button>
+        <button class="dock-app" data-open="Music" aria-label="Open Music"><span class="dock-icon music">♪</span><span class="dock-tip">iTunes</span></button>
+        <button class="dock-app" data-open="Books" aria-label="Open Books"><span class="dock-icon books">▯</span><span class="dock-tip">iBooks</span></button>
+        <button class="dock-app" data-open="App Store" aria-label="Open App Store"><span class="dock-icon appstore">A</span><span class="dock-tip">App Store</span></button>
+        <button class="dock-app" data-open="Settings" aria-label="Open System Preferences"><span class="dock-icon settings">⚙</span><span class="dock-tip">System Preferences</span></button>
+        <span class="dock-separator"></span>
+        <button class="dock-app" data-open="Finder" data-view="Downloads" aria-label="Open Downloads"><span class="dock-icon downloads">⇩</span><span class="dock-tip">Downloads</span></button>
+        <button class="dock-app" data-open="Trash" aria-label="Open Trash"><span class="dock-icon trash">▥</span><span class="dock-tip">Trash</span></button>
+      </div>
+    </nav>
+    <div id="popover-layer" class="popover-layer"></div>
+    <div id="spotlight-layer" class="spotlight-layer" hidden>
+      <div class="spotlight-card">
+        <div class="spotlight-search"><span>⌕</span><input id="spotlight-input" type="search" placeholder="Search apps and files" autocomplete="off" aria-label="Search apps and files"><kbd>esc</kbd></div>
+        <div id="spotlight-results" class="spotlight-results"></div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
