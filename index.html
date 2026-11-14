@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#20244f">
+  <title>Golden Gate — A macOS-style web desktop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="desktop" class="desktop" aria-label="Interactive macOS-style desktop">
+    <header class="menubar">
+      <div class="menu-left">
+        <button class="menubar-mark" aria-label="Open desktop menu" data-menu="system">✦</button>
+        <button class="menubar-app" data-menu="app"><strong id="active-app">Finder</strong></button>
+        <button data-menu="file">File</button>
+        <button data-menu="edit">Edit</button>
+        <button data-menu="view">View</button>
+        <button data-menu="window">Window</button>
+        <button data-menu="help">Help</button>
+      </div>
+      <div class="menu-right">
+        <button class="status-pill" aria-label="Open Control Center" data-action="control">◉ <span>⌁</span></button>
+        <button class="status-pill wifi" aria-label="Network status" data-action="control">◔</button>
+        <button class="status-pill" aria-label="Search" data-action="spotlight">⌕</button>
+        <button class="clock" id="clock" data-action="notifications" aria-label="Open notifications"></button>
+      </div>
+    </header>
+
+    <section id="desktop-icons" class="desktop-icons" aria-label="Desktop items">
+      <button class="desktop-item" data-open="Finder" data-view="Desktop"><span class="drive-icon">▤</span><span>Macintosh HD</span></button>
+      <button class="desktop-item" data-open="Notes"><span class="file-icon">✎</span><span>Welcome note</span></button>
+      <button class="desktop-item" data-open="Photos"><span class="photo-icon">✿</span><span>Wallpaper</span></button>
+    </section>
+
+    <section id="windows" class="windows" aria-live="polite"></section>
+
+    <nav class="dock-wrap" aria-label="App dock">
+      <div class="dock">
+        <button class="dock-app" data-open="Finder" aria-label="Open Finder"><span class="dock-icon finder">◉</span><span class="dock-tip">Finder</span></button>
+        <button class="dock-app" data-open="Launchpad" aria-label="Open Launchpad"><span class="dock-icon launchpad">▦</span><span class="dock-tip">Launchpad</span></button>
+        <button class="dock-app" data-open="Browser" aria-label="Open Browser"><span class="dock-icon browser">⌖</span><span class="dock-tip">Safari</span></button>
+        <span class="dock-separator"></span>
+        <button class="dock-app" data-open="Messages" aria-label="Open Messages"><span class="dock-icon messages">●</span><span class="dock-tip">Messages</span></button>
+        <button class="dock-app" data-open="Photos" aria-label="Open Photos"><span class="dock-icon photos">✿</span><span class="dock-tip">Photos</span></button>
+        <button class="dock-app" data-open="Calendar" aria-label="Open Calendar"><span class="dock-icon calendar"><small>MON</small><b id="dock-day">14</b></span><span class="dock-tip">Calendar</span></button>
+        <button class="dock-app" data-open="Notes" aria-label="Open Notes"><span class="dock-icon notes">▤</span><span class="dock-tip">Notes</span></button>
+        <button class="dock-app" data-open="Settings" aria-label="Open Settings"><span class="dock-icon settings">⚙</span><span class="dock-tip">Settings</span></button>
+        <span class="dock-separator"></span>
+        <button class="dock-app" data-open="Trash" aria-label="Open Trash"><span class="dock-icon trash">▥</span><span class="dock-tip">Trash</span></button>
+      </div>
+    </nav>
+
+    <div id="popover-layer" class="popover-layer"></div>
+    <div id="spotlight-layer" class="spotlight-layer" hidden>
+      <div class="spotlight-card">
+        <div class="spotlight-search"><span>⌕</span><input id="spotlight-input" type="search" placeholder="Search apps and files" autocomplete="off" aria-label="Search apps and files"><kbd>esc</kbd></div>
+        <div id="spotlight-results" class="spotlight-results"></div>
+      </div>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
